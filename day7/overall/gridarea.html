@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .parent{
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+        grid-template-rows: 1fr 2fr;
+        gap:3px;
+        height: 200px;
+       
+    }
+    .header{
+        grid-column:2/3 ;
+        border: 2px solid red;
+    }
+    .footer{
+        grid-column:1/3;
+        grid-row: 3/3;
+        border: 2px solid red;
+    }
+    .sidebar{
+        grid-column:1/2;
+        grid-row: 1/3;
+        border: 2px solid red;
+    }
+    .main{
+        grid-column:2/3 ;
+        grid-row: 2/3;
+        border: 2px solid red;
+    }
+    .f{
+        grid-column:1/3 ;
+        grid-row: 4/4;
+        border: 2px solid red;
+
+    }
+
+</style>
+<body>
+    <div class="parent">
+    <div class="header">Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora perspiciatis officiis consectetur quasi, reprehenderit harum commodi illo nulla sit rem molestiae quaerat neque necessitatibus quos repudiandae ipsam enim assumenda, rerum placeat hic eum recusandae beatae optio. Inventore facilis saepe molestiae a esse eaque eius natus dolorum laboriosam! Tenetur quidem ad reprehenderit, minima cum illum facere veniam, ex excepturi labore praesentium id, dolorem odio laboriosam officia dolores totam. Eius soluta voluptates fuga exercitationem dolore tempora veritatis doloremque optio ipsa corporis, commodi asperiores similique consequatur autem praesentium nobis consectetur vero, ducimus illo aspernatur. Magnam, doloribus! Expedita repudiandae corporis quibusdam dicta, at debitis, nesciunt quo pariatur commodi animi doloremque porro deserunt, placeat dolore ipsam incidunt voluptatibus sit reiciendis rerum a cumque vel aperiam! Et, obcaecati ad? Sint, ipsum excepturi. Blanditiis dolorem doloremque obcaecati iure. Sint dolorem fugit magnam, beatae reiciendis et odio illo esse ex nostrum expedita sapiente hic error nam magni molestias ducimus repellendus odit! Laborum magnam doloremque quos saepe fugit, aut, pariatur, iste esse aperiam facilis vel cumque maxime tenetur. Amet adipisci autem accusamus veniam sint hic nulla deserunt perspiciatis quas, unde sit ipsa ea natus numquam officia totam eveniet. Animi amet error nemo consequuntur minima? Quam, consequatur. Deserunt, officia quasi.</div>
+    <div class="footer"> Lorem ipsum, dolor sit amet consectetur adipisicing elit. Veniam vitae distinctio, soluta mollitia tempore nemo ab error praesentium fugiat corporis.</div>
+    <div class="sidebar">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minus rem animi nihil sit cupiditate laudantium, itaque tempore! Nostrum, soluta quas?</div>
+    <div class="main"><img src="https://www.picsum.photos/385/135"></div>
+    <div class="f">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quisquam ullam voluptas, doloremque ad itaque rem commodi consequatur nisi culpa necessitatibus.</div>
+</div>
+</body>
+</html>

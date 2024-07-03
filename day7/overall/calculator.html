@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+.parent{
+    display: grid;
+        grid-template-columns:repeat(4,1fr);
+        gap:3px;
+        height: 300px;
+        width: 170px; 
+        text-align:center;
+        margin: auto;
+        background-color: rgb(90, 100, 66);
+        padding: 5px;
+        border: 2px solid black;
+        border-radius: 10px;
+}
+input{
+    grid-column: 1/-1;
+    width:270;
+    height:100;
+    margin-bottom: 10px;
+    text-align: right;
+    border:none;
+    font-size:small;
+    background-color: aquamarine;
+    border: 2px solid black;
+}
+.co{
+    background-color:gray;
+    border: black solid;
+    color: white;
+}
+.col{
+background-color: rgb(141, 86, 192);
+color: white;
+}
+.color{
+background-color: rgb(0, 0, 0);
+color: white;
+}
+.colo{
+background-color:rgb(45, 45, 97);
+color: white;
+}
+button{
+    border-radius: 50%;
+    text-align: center;
+    border: 2px solid black;
+}
+body{
+    background-color:;
+    height:auto;
+    width:auto;
+}
+
+
+</style>
+
+<body>
+    <h1 align="center">Calculator</h1>
+    <center>
+    <div class="parent">  
+    <input type="text" value="0">
+    <button class="col">Ac</button>
+    <button class="co">()</button>
+    <button class="co">%</button>
+    <button class="co">/</button>
+    <button class="color">7</button>
+    <button class="color">8</button>
+    <button class="color">9</button>
+    <button class="co">x</button>
+    <button class="color">4</button>
+    <button class="color">5</button>
+    <button class="color">6</button>
+    <button class="co">-</button>
+    <button class="color">1</button>
+    <button class="color">2</button>
+    <button class="color">3</button>
+    <button class="co">+</button>
+    <button class="color">0</button>
+    <button class="color">.</button>
+    <button class="color">X</button>
+    <button class="colo">=</button>
+</div>
+</center>
+</body>
+</html>

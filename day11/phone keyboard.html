@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="Description" content="Enter your description here" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <title>Title</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        .keyboard {
+            display: grid;
+            grid-template-columns: repeat(10, 1fr);
+            gap: 5px;
+            margin: auto;
+            text-align: center;
+            margin: auto;
+            background-color: rgb(9, 9, 9);
+            padding: 4px;
+            border: 5px solid black;
+        }
+
+        button.key {
+            background-color: #1e81b3;
+            border: 1px solid #d7caca;
+            padding: 10px;
+            text-align: center;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button.key.wide {
+            grid-column: span 2;
+        }
+
+        button.key.space {
+            grid-column: span 5;
+        }
+
+        button.key:active {
+            background-color: #d0d0d0;
+        }
+
+        button.key.back {
+            grid-column: span 1;
+
+        }
+
+        input {
+            grid-column: 1/-1;
+            margin-bottom: 10px;
+            text-align: right;
+            font-size: small;
+            background-color: rgb(244, 240, 135);
+            border: 2px solid black;
+        }
+    </style>
+</head>
+
+<body>
+    <center>
+        <h1>Keyboard</h1>
+    </center>
+    <div class="keyboard">
+        <input type="text" id="disp1" placeholder="0">
+
+
+        <button class="key" onclick="sanjay(1)">1</button>
+        <button class="key"onclick="sanjay(2)">2</button>
+        <button class="key"onclick="sanjay(3)">3</button>
+        <button class="key"onclick="sanjay(4)">4</button>
+        <button class="key"onclick="sanjay(5)">5</button>
+        <button class="key"onclick="sanjay(6)">6</button>
+        <button class="key"onclick="sanjay(7)">7</button>
+        <button class="key"onclick="sanjay(8)">8</button>
+        <button class="key"onclick="sanjay(9)">9</button>
+        <button class="key"onclick="sanjay(0)">0</button>
+
+
+        <button class="key"onclick="sanjay(Q)">Q</button>
+        <button class="key"onclick="sanjay(W)">W</button>
+        <button class="key"onclick="sanjay(E)">E</button>
+        <button class="key"onclick="sanjay(R)">R</button>
+        <button class="key"onclick="sanjay(T)">T</button>
+        <button class="key"onclick="sanjay(Y)">Y</button>
+        <button class="key"onclick="sanjay(U)">U</button>
+        <button class="key"onclick="sanjay(I)">I</button>
+        <button class="key"onclick="sanjay(O)">O</button>
+        <button class="key"onclick="sanjay(P)">P</button>
+
+
+
+        <button class="key wide">A</button>
+        <button class="key">S</button>
+        <button class="key">D</button>
+        <button class="key">F</button>
+        <button class="key">G</button>
+        <button class="key">H</button>
+        <button class="key">J</button>
+        <button class="key">K</button>
+        <button class="key">L</button>
+
+
+
+        <button class="key wide bi bi-file-arrow-up-fill"></button>
+        <button class="key">Z</button>
+        <button class="key">X</button>
+        <button class="key">C</button>
+        <button class="key">V</button>
+        <button class="key">B</button>
+        <button class="key">N</button>
+        <button class="key">M</button>
+        <button class="key bi bi-x-square"onclick="backspace()"></button>
+
+
+
+        <button class="key">?123</button>
+        <button class="key">,</button>
+        <button class="key bi bi-emoji-smile"></button>
+        <button class="key space">English</button>
+        <button class="key">.</button>
+        <button class="key bi bi-search"></button>
+
+    </div>
+    <script>
+
+        var disp = document.getElementById("disp1");
+
+        function sanjay(value) {
+            disp.value += value;
+        }
+        function sanj(value) {
+            disp.value += value;
+        }
+
+        function clearDisplay() {
+            disp.value = "";
+        }
+        function backspace() {
+            disp.value = disp.value.slice(0, -1)
+        }
+    </script>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.9.2/umd/popper.min.js"></script>
+    <script
+        src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.0/js/bootstrap.min.js"></script>
+
+</body>
+
+</html>

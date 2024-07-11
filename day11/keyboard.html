@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Keyboard</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        .keyboard {
+            display: grid;
+            grid-template-columns: repeat(17, 1fr);
+            gap: 5px;
+            margin: auto;
+            text-align: center;
+            margin: auto;
+            background-color: rgb(9, 9, 9);
+            padding: 4px;
+            border: 5px solid black;
+        }
+
+        button.key {
+            background-color: #fd5050;
+            border: 1px solid #d7caca;
+            padding: 10px;
+            text-align: center;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button.key.wide {
+            grid-column: span 2;
+        }
+
+        button.key.space {
+            grid-column: span 5;
+        }
+
+        button.key:active {
+            background-color: #d0d0d0;
+        }
+
+        button.key.back {
+            grid-column: span 1;
+
+        }
+
+        input {
+            grid-column: 1/-1;
+            margin-bottom: 10px;
+            text-align: right;
+            font-size: small;
+            background-color: rgb(244, 240, 135);
+            border: 2px solid black;
+        }
+    </style>
+</head>
+
+<body>
+    <center>
+        <h1>Keyboard</h1>
+    </center>
+    <div class="keyboard">
+        <input type="text" id="disp1" placeholder="0">
+        <button class="key" onclick="sanjay(~)">~<br>`</button>
+        <button class="key" onclick="sanjay(1)">!<br>1</button>
+        <button class="key" onclick="sanjay(2)">@<br>2</button>
+        <button class="key" onclick="sanjay(3)">#<br>3</button>
+        <button class="key" onclick="sanjay(4)">$<br>4</button>
+        <button class="key" onclick="sanjay(5)">%<br>5</button>
+        <button class="key" onclick="sanjay(6)">^<br>6</button>
+        <button class="key" onclick="sanjay(7)">&<br>7</button>
+        <button class="key" onclick="sanjay(8)">*<br>8</button>
+        <button class="key" onclick="sanjay(9)">(<br>9</button>
+        <button class="key" onclick="sanjay(0)">)<br>0</button>
+
+        <button class="key" onclick="sanjay(-)">_<br>-</button>
+        <button class="key" onclick="sanjay(=)">+<br>=</button>
+
+        <button class="key back" onclick="backspace()">Backspace</button>
+        <button class="key" onclick="sanjay(+)">+</button>
+        <button class="key" onclick="sanjay(-)">-</button>
+
+        <button class="key" onclick="sanjay()">NumLk</button>
+
+
+
+
+
+
+        <button class="key back">Tab</button>
+        <button class="key" onclick="sanjay(Q)">Q</button>
+        <button class="key" onclick="sanjay(W)">W</button>
+        <button class="key" onclick="sanjay(E)">E</button>
+        <button class="key" onclick="sanjay(R)">R</button>
+        <button class="key" onclick="sanjay(T)">T</button>
+        <button class="key" onclick="sanjay(Y)">Y</button>
+        <button class="key" onclick="sanjay(U)">U</button>
+        <button class="key" onclick="sanjay(I)">I</button>
+        <button class="key" onclick="sanjay(O)">O</button>
+        <button class="key" onclick="sanjay(P)">P</button>
+        <button class="key" onclick="sanjay({})">{<br>[</button>
+        <button class="key" onclick="sanjay([])">}<br>]</button>
+        <button class="key" onclick="sanjay(\)">\|</button>
+        <button class="key" onclick="sanjay(7)">7<br>Home</button>
+        <button class="key" onclick="sanjay(8)">8<br>up</button>
+        <button class="key" onclick="sanjay(9)">9<br>PgUp</button>
+
+        <button class="key back">Caps Lock</button>
+        <button class="key">A</button>
+        <button class="key">S</button>
+        <button class="key">D</button>
+        <button class="key">F</button>
+        <button class="key">G</button>
+        <button class="key">H</button>
+        <button class="key">J</button>
+        <button class="key">K</button>
+        <button class="key">L</button>
+        <button class="key">:<br>;</button>
+        <button class="key">"<br>'</button>
+        <button class="key wide">Enter</button>
+        <button class="key">4</button>
+        <button class="key">5</button>
+        <button class="key">6</button>
+
+        <button class="key wide">Shift</button>
+        <button class="key">Z</button>
+        <button class="key">X</button>
+        <button class="key">C</button>
+        <button class="key">V</button>
+        <button class="key">B</button>
+        <button class="key">N</button>
+        <button class="key">M</button>
+        <button class="key"><br>,</button>
+        <button class="key">><br>.</button>
+        <button class="key">?<br>/</button>
+        <button class="key wide">Shift</button>
+        <button class="key">1<br>end</button>
+        <button class="key">2</button>
+        <button class="key">3<br>PgDn</button>
+
+
+        <button class="key back">Ctrl</button>
+        <button class="key back">Fn</button>
+        <button class="key">Window</button>
+        <button class="key wide">Alt</button>
+        <button class="key space">Space</button>
+        <button class="key back">Alt</button>
+        <button class="key">Win</button>
+        <button class="key">Menu</button>
+        <button class="key back">Ctrl</button>
+        <button class="key">0<br>Insert</button>
+        <button class="key">.<br>Delete</button>
+        <button class="key">Enter<br>=</button>
+    </div>
+    <script>
+
+        var disp = document.getElementById("disp1");
+
+        function sanjay(value) {
+            disp.value += value;
+        }
+        function clearDisplay() {
+            disp.value = "";
+        }
+        function backspace() {
+            disp.value = disp.value.slice(0, -1)
+        }
+    </script>
+</body>
+
+</html>
